@@ -1,0 +1,27 @@
+<input type="text" id="numero" />
+<input type="submit" id="adivinhar" value="Compare com o numero que estou pensando!">
+<script>
+    
+    var botaoClicado = function(){
+        if(segredo[length] == caixaDoNumero.value){
+            alert("Parabéns! você acertou o numero secreto")
+            caixaDoNumero.value = ""
+        }else{
+            alert("infelizmente você errou")
+            caixaDoNumero.value = ""
+        }
+        
+    }
+
+    function gerarNumeroAleatorio(){
+       let resultado = Math.round(Math.random () * 100)
+       return resultado
+    }
+
+    var caixaDoNumero = document.getElementById("numero")
+    var botaoAdivinhar = document.getElementById("adivinhar")
+    botaoAdivinhar.onclick = botaoClicado
+    
+    var segredo = [16, 34, 37, 42, 50, 58]
+
+</script>

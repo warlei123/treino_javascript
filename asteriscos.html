@@ -1,0 +1,59 @@
+<script>
+    var numeroDeLinhas = parseInt(prompt('quantas linhas vc deseja?'))
+    var numeroDeColunas = parseInt(prompt('quantas colunas?'))
+    var posicao1 = 1
+    var posicao2 = 18
+    var posicao3 = 2
+    var posicao4 = 19
+
+    document.write("desenho de 10x10<hr><br>")
+
+    for (let linha = 0; linha <= 10; linha++) {
+        for (let coluna = 0; coluna < 10; coluna++) {
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+
+    document.write("<br>desenho com numero de linha e colunas solicitado<hr><br>")
+
+    for (let linha = 0; linha <= numeroDeLinhas; linha++) {
+        for (let coluna = 0; coluna < numeroDeColunas; coluna++) {
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+
+    document.write("<br>desenho de triagulo<hr><br>")
+
+    for (let linha = 0; linha <= 10; linha++) {
+        document.write("")
+        for (let coluna = 0; coluna < linha; coluna++) {
+            document.write("*")
+        }
+        document.write('<br>')
+
+
+    }
+
+    document.write("<br>desenho do V de Vingança<hr><br>")
+
+    for (let linha = 1; linha <= 10; linha++) {
+        for (let coluna = 0; coluna <= 20; coluna++) {
+            if (coluna == posicao1 || coluna == posicao2 || coluna == posicao3 || coluna == posicao4) {
+                document.write("*")
+
+            } else {
+                document.write("_")
+            }
+
+
+
+        }
+        document.write('<br>')
+        posicao1++
+        posicao2--
+        posicao3++
+        posicao4--
+    }
+</script>

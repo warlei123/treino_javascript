@@ -1,0 +1,36 @@
+<script>
+    
+    function mostra(frase) {
+        document.write(frase)
+        document.write("<br>")
+    }
+
+    function calculoDePontos(vitorias, empates, derrotas){
+        var resultado = (vitorias * 3) + parseInt(empates)- parseInt(derrotas)
+        return resultado
+    }
+    
+    var vitorias = prompt("Quantos jogos o CDC Futebol Clube venceu?")
+    var empates = prompt("Quantos jogos o CDC Futebol Clube empatou?")
+    var derrotas = prompt("Quantos jogos o CDC Futebol Clube perdeu?")
+    var pontos = calculoDePontos(vitorias, empates, derrotas)
+    var vitoriasRival = prompt("Quantos jogos o Livros Velhos Futebol Clube venceu?")
+    var empatesRival = prompt("Quantos jogos o Livros Velhos Futebol Clube empatou?")
+    var derrotasRival = prompt("Quantos jogos o Livros velhos Futebol Clube perdeu?")
+    var pontosRival = calculoDePontos(vitoriasRival, empatesRival, derrotasRival)
+    mostra(`Nosso time tem ${pontos} pontos!`)
+    mostra(`Livros Velhos tem ${pontosRival} pontos!`)
+
+    if (pontos > pontosRival){
+        mostra(`Nosso time esta indo MELHOR que o livros velhos! `)
+    }
+
+    if (pontos < pontosRival){
+        mostra(`Nosso time esta indo PIOR que o livros velhos!`)
+    }
+
+    if(pontos == pontosRival){
+        mostra(`Nosso time esta EMPATADO com o livros velhos!`)
+    }
+
+</script>

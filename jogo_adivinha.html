@@ -1,0 +1,35 @@
+<script>
+    var pulaLinha = function() {
+        document.write("<br>")
+    }
+
+    var mostra = function(frase) {
+        document.write(frase)
+        pulaLinha()
+    }
+
+    function sortearNumero(numero){
+        var resultado = Math.round(Math.random() * numero)
+        return resultado
+    }
+    
+    var numeroPensado = sortearNumero(100)
+    var chute = prompt('Já pensei. Qual você acha que é?')
+
+    while(isNaN(chute) || chute == ""){
+        chute = prompt('Isso não um numero. Qual você acha que é?')
+    }
+
+    if(chute == numeroPensado){
+        mostra(`Uau! Você acertou, pois eu pensei no ${numeroPensado}`)
+    }
+
+    if(chute > numeroPensado){
+        mostra(`Palpite muito alto! eu pensei no ${numeroPensado}`)
+    }
+
+    if(chute < numeroPensado){
+        mostra(`Palpite muito baixo! eu pensei no ${numeroPensado}`)
+    }
+
+</script>

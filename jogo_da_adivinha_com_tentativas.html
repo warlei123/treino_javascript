@@ -1,0 +1,22 @@
+<script>
+    var numeroPensado = Math.round(Math.random() * 100);
+
+    var numeroDaTentativa = 1
+    while (chute != numeroPensado && true) {
+        var chute = prompt("Qual você acha que é?");
+        if (chute == numeroPensado) {
+            alert("Parabéns, você acertou!");
+            
+        } else {
+           if (chute > numeroPensado){
+               alert('Palpite muito alto, tente novamente')
+           }
+           if(chute < numeroPensado){
+               alert('palpite muito baixo, tente novamente')
+           }
+        }
+        numeroDaTentativa++
+       
+    }
+    alert(`${numeroDaTentativa} tentativas `)
+</script>

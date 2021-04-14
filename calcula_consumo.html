@@ -1,0 +1,36 @@
+<h3>Alcool Ou Gasolina?</h3>
+<script>
+    var tanqueCarro = 40
+    var caminhoComGasolina = 480
+    var caminhoComAlcool = 300
+    var consumoDeGasolina = caminhoComGasolina / tanqueCarro
+    var consumoDeAlcool = caminhoComAlcool / tanqueCarro
+    var precoGasolina = 2.90
+    var precoAlcool = 2.80
+    var precoPorKilometroGasolina = parseFloat((precoGasolina / consumoDeGasolina).toFixed(2))
+    var precoPorKilometroAlcool = parseFloat((precoAlcool / consumoDeAlcool).toFixed(2))
+    var nomeFinal = parseFloat(Math.min(precoPorKilometroGasolina, precoPorKilometroAlcool))
+    var quebrarLinha = pularLinha()
+
+    function pularLinha(){
+        return "<br>"
+    }
+
+
+    function nome(valor){
+        if (valor == precoPorKilometroGasolina){
+            return "a gasolina"
+        }else if(valor == precoPorKilometroAlcool){
+            return "o alcool"
+        }else{
+            return "não encontrado"
+        }
+        
+    }
+
+    document.write(`O consumo de gasolina foi de ${Math.round(consumoDeGasolina)} Km por litro${quebrarLinha}`)
+    document.write(`O consumo de alcool foi de ${Math.round(consumoDeAlcool)} Km por litro${quebrarLinha}`)
+    document.write(`O preço da gasolina por quilometro é: R$${precoPorKilometroGasolina}${quebrarLinha}`)
+    document.write(`O preço do alcool por quilometro é: R$${precoPorKilometroAlcool}${quebrarLinha}`)
+    document.write(`O combustivel mais em conta é ${nome(nomeFinal)} no preço de R$ ${Math.min(precoPorKilometroAlcool, precoPorKilometroGasolina).toFixed(2)}${quebrarLinha}`)
+</script>

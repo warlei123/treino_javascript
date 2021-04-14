@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body{align-items: center; text-align: center;}</style>
+</head>
+<body>
+    <div>teste</div>
+</body>
+
+<script>
+    function gerarNumeroAleatorio() {
+        let numero = Math.round(Math.random() * 60)
+        return numero
+    }
+
+    function adicionarNumeroSorteados() {
+        for (let i = 1; i <= 6; i++) {
+            let numero = gerarNumeroAleatorio()
+            if (sorteados.includes(numero)) {
+               numero = numero + 1
+            }
+            sorteados.push(numero)
+        }
+    }
+
+    function perguntarNumeroUsuario() {
+        for (let i = 1; i <= index; i++) {
+            let numeroPerguntado = parseInt(prompt("escolha um numero"))
+            let numeroValido = validarNumero(numeroPerguntado) 
+            if(numeroValido != true){
+                numeroPerguntado = prompt("Numero invalido, digite novamante")
+                index++
+            }else{
+                escolhidos.push(numeroPerguntado)
+            }
+
+        }
+    }
+
+    function validarNumero(numero) {
+        while (numero > 60 || isNaN(numero) || escolhidos.includes(numero)) {
+            return false
+        }
+        return true
+    }
+
+    var sorteados = []
+    var escolhidos = []
+    var index = 6
+
+
+    
+    
+    adicionarNumeroSorteados()
+    perguntarNumeroUsuario()
+
+    console.log(sorteados.sort())
+    console.log(escolhidos)
+</script>
+</html>
