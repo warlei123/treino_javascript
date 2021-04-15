@@ -1,0 +1,28 @@
+
+body{
+    align-items: center; 
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAmtfW2GOPeJKlhoOFLGlzvCemJXkOtq27yNNlIMQxfn2DAUPVphbd9nkH79mi9ZFrg9k&usqp=CAU);
+}
+
+.logo{
+    height: 50%;
+    width: 100%;
+}
+
+.texto{
+    font-size: 20px;
+    opacity: 100%;     
+}
+
+.total{
+    background-color: rgba(100, 211, 174, 0.90);
+    height: 100%;
+    border-radius: 5%;
+}
+
+.titulo{
+    font-size: 40px ;
+}

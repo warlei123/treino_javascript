@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body><div class="total">
+    <div class="titulo">Loteria</div>
+    <div id="img"><img src="https://img.freepik.com/free-vector/lottery-balls-3d-bingo-lotto-keno-gambling-games_8071-2879.jpg?size=626&ext=jpg" class="logo"></div>
+    <div id= "substituir" class="texto">Vamos jogar<p style="font-size: 20px;">escolha <span id="numeroEscolhas"></span> numeros entre <span id="numeroMin"></span> e <span id="numeroMax"></span> e teste sua sorte</p><button id="jogar" onclick="perguntarNumeroUsuario()">Clique para começar</button></div>
+    <div id= "consultar" class="texto"></div>
+</div>
+</body>
+
+<script src="interface.js"></script>
+<script src="regras.js"></script>
+
+<script>  
+    globalThis.quantidadeNumerosEscolha = 6
+    globalThis.valorMaximo = 60
+    globalThis.valorMinimo = 0
+
+    function perguntarNumeroUsuario() {
+        var index = quantidadeNumerosEscolha
+        
+        for (let i = 1; i <= index; i++) {
+            let numeroPerguntado = parseInt(prompt(`escolha o ${escolhidos.length + 1}º numero`))
+            let valido = numeroValido(numeroPerguntado)
+            let naoEscolhido = numeroNaoEscolhido(numeroPerguntado)
+
+            if (valido && naoEscolhido){
+                escolhidos.push(numeroPerguntado)
+            } else {
+                numeroPerguntado = alert(`Numero invalido, digite novamante`)
+                index++
+            }
+        }
+        escreverNumerosDigitados() 
+    }
+
+    adicionarNumeroSorteados()
+    teste()
+</script>
+</html>
