@@ -5,10 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>body{align-items: center; text-align: center;}</style>
+    <style>
+
+    body{
+        align-items: center; text-align: center;
+    }
+
+    .logo{
+        height: 50%;
+        width: 50%;
+    }
+
+
+   
+    </style>
 </head>
 <body>
-    <div>teste</div>
+    <div id="img"><img src="https://img.freepik.com/free-vector/lottery-balls-3d-bingo-lotto-keno-gambling-games_8071-2879.jpg?size=626&ext=jpg" class="logo"></div>
+    <div><button id="jogar" onclick="perguntarNumeroUsuario()">Clique para começar</button></div>
 </body>
 
 <script>
@@ -28,6 +42,7 @@
     }
 
     function perguntarNumeroUsuario() {
+        var index = 6
         for (let i = 1; i <= index; i++) {
             let numeroPerguntado = parseInt(prompt("escolha um numero"))
             let numeroValido = validarNumero(numeroPerguntado) 
@@ -38,7 +53,7 @@
                 escolhidos.push(numeroPerguntado)
             }
 
-        }
+        }console.log(escolhidos)
     }
 
     function validarNumero(numero) {
@@ -50,15 +65,12 @@
 
     var sorteados = []
     var escolhidos = []
-    var index = 6
-
-
-    
     
     adicionarNumeroSorteados()
-    perguntarNumeroUsuario()
+    
 
     console.log(sorteados.sort())
-    console.log(escolhidos)
+    
+
 </script>
 </html>
