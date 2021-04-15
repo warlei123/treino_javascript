@@ -13,7 +13,7 @@ function resultado() {
 function teste() {
     quantidadeEscolha.innerHTML = quantidadeNumerosEscolha
     numeroMax.innerHTML = valorMaximo
-    numeroMin.innerHTML = valorMinimo
+    numeroMin.innerHTML = valorMinimo + 1
 }
 
 var escreverNumerosEscolhidos = document.getElementById("substituir")
