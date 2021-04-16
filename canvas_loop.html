@@ -1,0 +1,89 @@
+<canvas id="tela" width="600" height="400"></canvas><hr>
+<canvas id="triangulo" width="600" height="400"></canvas>
+
+<script>
+    var tela = document.getElementById("tela")
+    var c = tela.getContext("2d")
+
+    function desenharQuadrado(x, y, cor, borda) {
+        c.fillStyle = cor
+        c.fillRect(x, y, 50, 50)
+        c.strokeStyle = "black"
+        c.strokeRect(x, y, 50, 50)
+    }
+
+
+    function desenharCiculoAzul(x, y) {
+        c.fillStyle = "blue"
+        c.beginPath()
+        c.arc(x, y, 25, 0, 2 * Math.PI)
+        c.fill()
+    }
+
+    // for(var x = 0; x < 600; x = x + 50){
+    //     desenharQuadrado(x, 0, "green", "black") 
+    //     desenharQuadrado(x, 50, "red", "black") 
+    //     desenharCiculoAzul (x + 25, 100)
+    // }
+
+    var posicao1 = 0
+    var posicao2 = 500
+
+    for (let linha = 50; linha <= 550; linha = linha + 50) {
+        for (let coluna = 0; coluna <= 250; coluna = coluna + 50) {
+            if (coluna == posicao1 || coluna == posicao2) {
+                desenharQuadrado(linha, coluna, "green", "black")
+            } else {
+                desenharQuadrado(linha, coluna, "red", "black")
+            }
+        }
+
+        posicao1 = posicao1 + 50
+        posicao2 = posicao2 - 50
+
+    }
+   
+    //--------
+
+    var triangulo = document.getElementById("triangulo")
+    var caneta = triangulo.getContext("2d")
+
+
+    function desenharQuadradoAlt(x, y, cor) {
+        caneta.fillStyle = cor
+        caneta.fillRect(x, y, 50, 50)
+        caneta.strokeStyle = "black"
+        caneta.strokeRect(x, y, 50, 50)
+    }
+
+    function desenharQuadradoAlt2(x, cor) {
+        let y = 0
+        while(y <= 400){
+        caneta.fillStyle = cor
+        caneta.fillRect(x, y, 50, 50)
+        caneta.strokeStyle = "black"
+        caneta.strokeRect(x, y, 50, 50)
+        y = y + 50
+        }
+    }
+
+    var x = 0
+    var y = 0
+
+
+    for (let linha = 0; linha <= 600; linha = linha + 50) {
+        desenharQuadradoAlt2(x,"red")
+        y = y + 50
+        x = x + 50
+        for (let coluna = 0; coluna < linha; coluna = coluna + 50) {
+            desenharQuadradoAlt(linha,coluna,"green")
+           
+        }
+        
+        
+    }
+
+    
+
+
+</script>
