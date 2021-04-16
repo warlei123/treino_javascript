@@ -14,16 +14,9 @@ Brasil<br><canvas id="brasil" width="600" height="400" ></canvas><hr>
     c.fillRect(0, 0, 200, 400)
     c.fillStyle = "red"
     c.fillRect(400, 0, 200, 400)
-    c.fillStyle="gray";
-    c.beginPath();
-    c.moveTo(300, 200);
-    c.lineTo(200, 400);
-    c.lineTo(400, 400);
-    c.fill();
-    c.fillStyle = "blue"
-    c.beginPath()
-    c.arc(300, 200, 50, 0, 2 * Math.PI)
-    c.fill()
+    c.strokeStyle = "black"
+    c.strokeRect (0,0,600,400)
+  
 
     var colombia = document.getElementById("colombia")
     var bandeiraColombia = colombia.getContext("2d")
@@ -33,6 +26,7 @@ Brasil<br><canvas id="brasil" width="600" height="400" ></canvas><hr>
     bandeiraColombia.fillRect(0, 200, 600, 100)
     bandeiraColombia.fillStyle = "red"
     bandeiraColombia.fillRect(0, 300, 600, 100)
+    bandeiraColombia.strokeRect (0,0,600,400)
 
     var madagascar = document.getElementById("madagascar")
     var bandeiraMadagascar = madagascar.getContext('2d')
@@ -42,6 +36,7 @@ Brasil<br><canvas id="brasil" width="600" height="400" ></canvas><hr>
     bandeiraMadagascar.fillRect(200, 0, 400, 200)
     bandeiraMadagascar.fillStyle = "green"
     bandeiraMadagascar.fillRect(200, 200, 400, 200)
+    bandeiraMadagascar.strokeRect (0,0,600,400)
 
     var laos = document.getElementById('laos')
     var bandeiraLaos = laos.getContext("2d")
@@ -55,6 +50,7 @@ Brasil<br><canvas id="brasil" width="600" height="400" ></canvas><hr>
     bandeiraLaos.beginPath()
     bandeiraLaos.arc(300, 200, 80, 0, 2 * 3.14)
     bandeiraLaos.fill()
+    bandeiraLaos.strokeRect (0,0,600,400)
 
     var niger = document.getElementById("niger")
     var bandeiraNiger = niger.getContext('2d')
@@ -68,6 +64,7 @@ Brasil<br><canvas id="brasil" width="600" height="400" ></canvas><hr>
     bandeiraNiger.beginPath()
     bandeiraNiger.arc(300, 200, 50, 0, 2 * 3.14)
     bandeiraNiger.fill()
+    bandeiraNiger.strokeRect (0,0,600,400)
 
     var noruega = document.getElementById("noruega")
     var bandeiraNoruega = noruega.getContext('2d')
@@ -81,6 +78,7 @@ Brasil<br><canvas id="brasil" width="600" height="400" ></canvas><hr>
     bandeiraNoruega.fillRect(170, 0, 80, 400)
     bandeiraNoruega.fillStyle = "blue"
     bandeiraNoruega.fillRect(0, 160, 600, 80)
+    bandeiraNoruega.strokeRect (0,0,600,400)
 
     var brasil = document.getElementById("brasil")
     var bandeiraBrasil = brasil.getContext('2d')
@@ -97,6 +95,7 @@ Brasil<br><canvas id="brasil" width="600" height="400" ></canvas><hr>
     bandeiraBrasil.fillStyle = "blue"
     bandeiraBrasil.arc(300, 200, 120, 150, 2 * 3,14)
     bandeiraBrasil.fill()
+    bandeiraBrasil.strokeRect (0,0,600,400)
    
 
 </script>
