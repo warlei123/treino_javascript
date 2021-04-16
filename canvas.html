@@ -1,0 +1,102 @@
+Italia <br><canvas id="italia" width="600" height="400" ></canvas><hr>
+Colombia<br><canvas id="colombia" width="600" height="400" ></canvas><hr>
+Madagascar<br><canvas id="madagascar" width="600" height="400" ></canvas><hr>
+Laos<br><canvas id="laos" width="600" height="400" ></canvas><hr>
+Niger<br><canvas id="niger" width="600" height="400" ></canvas><hr>
+Noruega<br><canvas id="noruega" width="600" height="400" ></canvas><hr>
+Brasil<br><canvas id="brasil" width="600" height="400" ></canvas><hr>
+
+<script>
+
+    var italia = document.getElementById("italia")
+    var c = italia.getContext("2d")
+    c.fillStyle = "green"
+    c.fillRect(0, 0, 200, 400)
+    c.fillStyle = "red"
+    c.fillRect(400, 0, 200, 400)
+    c.fillStyle="gray";
+    c.beginPath();
+    c.moveTo(300, 200);
+    c.lineTo(200, 400);
+    c.lineTo(400, 400);
+    c.fill();
+    c.fillStyle = "blue"
+    c.beginPath()
+    c.arc(300, 200, 50, 0, 2 * Math.PI)
+    c.fill()
+
+    var colombia = document.getElementById("colombia")
+    var bandeiraColombia = colombia.getContext("2d")
+    bandeiraColombia.fillStyle = "yellow"
+    bandeiraColombia.fillRect(0, 0, 600, 200)
+    bandeiraColombia.fillStyle = "blue"
+    bandeiraColombia.fillRect(0, 200, 600, 100)
+    bandeiraColombia.fillStyle = "red"
+    bandeiraColombia.fillRect(0, 300, 600, 100)
+
+    var madagascar = document.getElementById("madagascar")
+    var bandeiraMadagascar = madagascar.getContext('2d')
+    bandeiraMadagascar.fillStyle = "beige"
+    bandeiraMadagascar.fillRect(0, 0, 200, 400)
+    bandeiraMadagascar.fillStyle = "red"
+    bandeiraMadagascar.fillRect(200, 0, 400, 200)
+    bandeiraMadagascar.fillStyle = "green"
+    bandeiraMadagascar.fillRect(200, 200, 400, 200)
+
+    var laos = document.getElementById('laos')
+    var bandeiraLaos = laos.getContext("2d")
+    bandeiraLaos.fillStyle = "red"
+    bandeiraLaos.fillRect(0, 0, 600, 100)
+    bandeiraLaos.fillStyle = "blue"
+    bandeiraLaos.fillRect(0, 100, 600, 200)    
+    bandeiraLaos.fillStyle = "red"
+    bandeiraLaos.fillRect(0, 300, 600, 100)
+    bandeiraLaos.fillStyle = 'white'
+    bandeiraLaos.beginPath()
+    bandeiraLaos.arc(300, 200, 80, 0, 2 * 3.14)
+    bandeiraLaos.fill()
+
+    var niger = document.getElementById("niger")
+    var bandeiraNiger = niger.getContext('2d')
+    bandeiraNiger.fillStyle = "orange"
+    bandeiraNiger.fillRect(0, 0, 600, 130)
+    bandeiraNiger.fillStyle = "beige"
+    bandeiraNiger.fillRect(0, 130, 600, 140)    
+    bandeiraNiger.fillStyle = "green"
+    bandeiraNiger.fillRect(0, 270, 600, 130)
+    bandeiraNiger.fillStyle = 'orange'
+    bandeiraNiger.beginPath()
+    bandeiraNiger.arc(300, 200, 50, 0, 2 * 3.14)
+    bandeiraNiger.fill()
+
+    var noruega = document.getElementById("noruega")
+    var bandeiraNoruega = noruega.getContext('2d')
+    bandeiraNoruega.fillStyle = "red"
+    bandeiraNoruega.fillRect(0, 0, 600, 400)
+    bandeiraNoruega.fillStyle = "white"
+    bandeiraNoruega.fillRect(150, 0, 120, 400)
+    bandeiraNoruega.fillStyle = "white"
+    bandeiraNoruega.fillRect(0, 140, 600, 120)
+    bandeiraNoruega.fillStyle = "blue"
+    bandeiraNoruega.fillRect(170, 0, 80, 400)
+    bandeiraNoruega.fillStyle = "blue"
+    bandeiraNoruega.fillRect(0, 160, 600, 80)
+
+    var brasil = document.getElementById("brasil")
+    var bandeiraBrasil = brasil.getContext('2d')
+    bandeiraBrasil.fillStyle = "green"
+    bandeiraBrasil.fillRect(0,0,600,400)
+    bandeiraBrasil.fillStyle = "yellow"
+    bandeiraBrasil.beginPath()
+    bandeiraBrasil.moveTo(50,  200)
+    bandeiraBrasil.lineTo(300, 50)
+    bandeiraBrasil.lineTo(550, 200)
+    bandeiraBrasil.lineTo(300, 350)
+    bandeiraBrasil.fill()
+    bandeiraBrasil.beginPath()
+    bandeiraBrasil.fillStyle = "blue"
+    bandeiraBrasil.arc(300, 200, 120, 150, 2 * 3,14)
+    bandeiraBrasil.fill()
+   
+
+</script>
