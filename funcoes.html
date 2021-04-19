@@ -1,16 +1,36 @@
+<canvas id="tela" width="600" height="400"></canvas>
+
 <script>
-    var primeira = function() {
-    console.log("1 - antes");
-    segunda();
-    console.log("1 - depois");
-    };
-    var segunda = function() {
-    console.log("2 - antes");
-    terceira();
-    console.log("2 - depois");
-    };
-    var terceira = function() {
-    console.log("3");
-    };
-    primeira();
-    </script>
+    var tela = document.getElementById("tela")
+    var c = tela.getContext("2d")
+    c.fillStyle = "blue"
+
+    var funcaoQuadratica = function(x){
+        return 0.01 * x * x
+    }
+
+    var funcaoSeno = function(x){
+        return Math.sin(x/20) * 100 + 200
+    }
+
+    var funcaoRaiz = function(x){
+        return Math.sqrt(x)
+    }
+
+    var funcaoLogartimo = function(x){
+        return Math.log(x) * 10 
+    }
+
+    var desenharFuncao = function(funcaoMatematica) {
+        for (var x = 0; x < 600; x = x + 1) {
+            var y = funcaoMatematica(x)
+            console.log("Para x = " + x + ", o y vale " + y);
+            
+            c.beginPath()
+            c.arc(x, 400 - y, 2, 0, 2 * Math.PI)
+            c.fill()
+        }
+    }
+
+    desenharFuncao(funcaoLogartimo)
+</script>
