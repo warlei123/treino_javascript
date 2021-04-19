@@ -1,0 +1,50 @@
+li{
+    width: 25px;
+    height: 25px;
+}
+
+
+.vermelho{
+    background-color:red;
+    
+}
+.amarelo{
+    background-color:yellow;
+    
+}
+.rosa{
+    background-color:pink;
+   
+}
+.marron{
+    background-color:brown;
+    
+}
+.verde{
+    background-color:green;
+   
+}
+.laranja{
+    background-color:orange;
+    
+}
+.roxo{
+    background-color:purple;
+  
+}
+.branco{
+    background-color:white;
+}
+
+.preto{
+    background-color:black;
+}
+   
+.cinza{
+    background-color:gray;
+}
+
+.tela{
+   margin-left: 26px;
+   margin-top: -250px;
+}
