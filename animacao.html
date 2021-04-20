@@ -1,0 +1,61 @@
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.getElementById('tela')
+    var c = tela.getContext("2d")
+
+    c.fillStyle = 'gray'
+    c.fillRect(0, 0, 600, 400)
+
+    var circulo = function(x, y, raio){
+        c.strokeStyle = 'blue'
+        c.beginPath()
+        c.arc(x, y, raio, 0, 2 * Math.PI)
+        c.stroke()
+    }
+
+    var quadrado = function(x, y){
+        c.strokeStyle = 'green'
+        c.strokeRect (x, y, x, y)
+    }
+
+    var losango = function(){
+        c.fillStyle = "yellow"
+        c.beginPath()
+        c.moveTo(a, z)
+        a++
+        z++
+        c.lineTo(z, a)
+        a++
+        z++
+        c.lineTo(a, z)
+        a++
+        z++
+        c.lineTo(z, a)
+        c.fill()
+    }
+
+    var limparTela = function(){
+        c.clearRect(0, 0, 600, 400)
+    }
+
+    var x = 1
+    var y = 1
+    var a = 10
+    var z = 200
+
+
+    var desenha = function(){
+        
+        losango()
+        quadrado(x, y)
+        circulo(x, 200, x/2)
+        x++
+        y++
+      
+    }
+
+    setInterval(desenha, 30)    
+
+</script>

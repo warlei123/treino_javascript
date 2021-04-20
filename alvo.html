@@ -1,0 +1,48 @@
+<canvas id="tela" width="500" height="500"></canvas>
+
+<script>
+    
+    var cor = function(){
+        if(cor == 'white'){
+            return 'red'
+        }
+        if(cor == 'red'){
+            return 'white'
+        }
+
+    }
+
+    var circulo = function(x, y, raio){
+        c.fillStyle = 'white'
+        c.beginPath()
+        c.arc(x, y, raio, 0, 2 * Math.PI)
+        c.fill()
+    }
+
+
+    var desenhaAlvo = function(x, y){
+        var raio = 40;
+        cor("white");
+        circulo(x, y, raio);
+        cor("red");
+        circulo(x, y, raio-10);
+        cor("white");
+        circulo(x, y, raio-20);
+        cor("red");
+        circulo(x, y, raio-30);
+    }
+
+    var alvoX = 0
+    var alvoY = 0
+
+
+    var desenha = function(){
+        limpa()
+        alvoX = sorteia(600)
+        alvoY = sorteia(400)
+        desenhaAlvo(alvoX, alvoY)
+    }
+
+    
+
+</script>
