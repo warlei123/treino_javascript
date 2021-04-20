@@ -1,5 +1,6 @@
 <h3>Alcool Ou Gasolina?</h3>
 <script>
+   
     var tanqueCarro = 40
     var caminhoComGasolina = 480
     var caminhoComAlcool = 300
@@ -15,7 +16,6 @@
     function pularLinha(){
         return "<br>"
     }
-
 
     function nome(valor){
         if (valor == precoPorKilometroGasolina){
@@ -33,4 +33,5 @@
     document.write(`O preço da gasolina por quilometro é: R$${precoPorKilometroGasolina}${quebrarLinha}`)
     document.write(`O preço do alcool por quilometro é: R$${precoPorKilometroAlcool}${quebrarLinha}`)
     document.write(`O combustivel mais em conta é ${nome(nomeFinal)} no preço de R$ ${Math.min(precoPorKilometroAlcool, precoPorKilometroGasolina).toFixed(2)}${quebrarLinha}`)
+
 </script>

@@ -1,22 +1,23 @@
 <input type="text" id="numero" />
-<input type="submit" value="Adicione e verifique no Bingo!" id="verificar"/>
+<input type="submit" value="Adicione e verifique no Bingo!" id="verificar" />
 
 <script>
+    
+    var sorteados = []
 
-var sorteados = []
-
-var adicionarSorteado = function(){
-    var numero = document.getElementById("numero").value
-    for(let i = 0; i < sorteados.length; i++){
-        if(sorteados[i] == numero){
-            alert("Numero já sorteado!")
-            return
+    var adicionarSorteado = function () {
+        var numero = document.getElementById("numero").value
+        for (let i = 0; i < sorteados.length; i++) {
+            if (sorteados[i] == numero) {
+                alert("Numero já sorteado!")
+                return
+            }
         }
+        sorteados.push(parseInt(numero))
+        console.log(sorteados)
     }
-    sorteados.push(parseInt(numero))
-    console.log(sorteados)
-}
 
-var botao = document.getElementById("verificar")
-botao.onclick = adicionarSorteado
+    var botao = document.getElementById("verificar")
+    botao.onclick = adicionarSorteado
+
 </script>

@@ -39,15 +39,11 @@
         circulo(x, y, raio,     "white");
         circulo(x, y, raio-10,  "red");
         circulo(x, y, raio-20,  "white");
-        circulo(x, y, raio-30,  "red");
-        
-       
-        
+        circulo(x, y, raio-30,  "red");  
     }
 
     var alvoX = 0
     var alvoY = 0
-
 
     var desenha = function(){
         limpa()
@@ -60,7 +56,6 @@
     var pontos = 0
     var displayPontos = document.getElementById('pontos')
     
-
     var tiro = function(evento){
         var eixoX = evento.pageX - tela.offsetLeft;
         var eixoY = evento.pageY - tela.offsetTop;
@@ -73,8 +68,4 @@
 
     tela.onclick = tiro
     
-
-    
-    
-
 </script>

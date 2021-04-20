@@ -1,6 +1,5 @@
 <canvas id="tela" width="600" height="400"></canvas>
 
-
 <script>
 
     var tela = document.getElementById('tela')
@@ -46,15 +45,13 @@
     var a = 10
     var z = 200
 
-
     var desenha = function(){
         
         losango()
         quadrado(x, y)
         circulo(x, 200, x/2)
         x++
-        y++
-      
+        y++   
     }
 
     setInterval(desenha, 30)    

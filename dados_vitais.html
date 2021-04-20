@@ -1,4 +1,5 @@
 <script>
+
     var calcularDiasDeVida = function (idade) {
         diasDeVida = idade * 365.25
         return diasDeVida
@@ -14,4 +15,5 @@
     var diaEBatimentos = [calcularDiasDeVida(idade), calcularBatimentosCardiacos(calcularDiasDeVida(idade))]
     document.write(`Você ja viveu ${diaEBatimentos[0]} dias de vida <br><br>`)
     document.write(`Seu coração ja bateu ${diaEBatimentos[1]} vezes. Haja coração`)
+
 </script>
