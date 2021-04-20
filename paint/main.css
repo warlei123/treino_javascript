@@ -1,50 +1,15 @@
 li{
-    width: 25px;
+    width: 57px;
     height: 25px;
 }
 
-
-.vermelho{
-    background-color:red;
-    
-}
-.amarelo{
-    background-color:yellow;
-    
-}
-.rosa{
-    background-color:pink;
-   
-}
-.marron{
-    background-color:brown;
-    
-}
-.verde{
-    background-color:green;
-   
-}
-.laranja{
-    background-color:orange;
-    
-}
-.roxo{
-    background-color:purple;
-  
-}
-.branco{
-    background-color:white;
-}
-
-.preto{
-    background-color:black;
-}
-   
-.cinza{
-    background-color:gray;
-}
-
 .tela{
-   margin-left: 26px;
-   margin-top: -250px;
+   margin-left: 60px;
+   margin-top: -310px;
+}
+
+.mostra{
+    width: 50px;
+    height: 50px;
+    border-style: solid;
 }
