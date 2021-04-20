@@ -52,7 +52,7 @@
         desenhaAlvo(alvoX, alvoY)
     }
 
-    setInterval(desenha, 800)
+    setInterval(desenha, 2000)
     var pontos = 0
     var displayPontos = document.getElementById('pontos')
     
@@ -60,7 +60,6 @@
         var eixoX = evento.pageX - tela.offsetLeft;
         var eixoY = evento.pageY - tela.offsetTop;
         if((eixoX > alvoX - raio) && (eixoX < alvoX + raio) && (eixoY > alvoY - raio) && (eixoY < alvoY + raio)){
-            alert  ('acertou')
             pontos++
             displayPontos.innerHTML = `Pontuação: ${pontos}`
         }
