@@ -5,15 +5,14 @@
     c.fillStyle = "gray"
     c.fillRect(0, 0, 600, 400)
 
-    var corSelecionada = ""
+    var corSelecionada = "white"
+    var corAtiva = document.getElementById("mostra")
     
-    function clique(cor){
-        return corSelecionada = cor
-    }
 
-    
-   
-   
+    function clique(cor){
+        corSelecionada = cor
+        corAtiva.style.backgroundColor = corSelecionada
+    }
 
     var desenharCirculo = function (evento) {
         var x = evento.pageX - tela.offsetLeft
@@ -22,8 +21,16 @@
         c.beginPath()
         c.arc(x, y, 10, 0, 2 * 3.14)
         c.fill()
-        console.log("posição do clique : " + x + ", " + y);
     }
 
     tela.onmousemove = desenharCirculo
+    
+
+
+    
+
+    
+    
+    
+   
   
