@@ -1,35 +1,48 @@
-<canvas id="tela" width="500" height="500"></canvas>
+<div id="pontos" style="font-size: 30px; color: royalblue;">Pontuação: 0</div>
+<canvas id="tela" width="600" height="400"></canvas>
 
 <script>
     
-    var cor = function(){
-        if(cor == 'white'){
-            return 'red'
-        }
-        if(cor == 'red'){
-            return 'white'
-        }
-
+    var tela = document.getElementById('tela')
+    var c = tela.getContext('2d')
+    c.fillStyle = 'gray'
+    c.fillRect(0, 0, 600, 400)
+    
+    var sorteia = function(numero){
+        return Math.round(Math.random() * numero)
     }
 
-    var circulo = function(x, y, raio){
-        c.fillStyle = 'white'
+    var limpa = function(){
+        c.clearRect(0, 0, 600, 400)
+    }
+
+    var circulo = function(x, y, raio, cor){
+        c.fillStyle = cor
         c.beginPath()
         c.arc(x, y, raio, 0, 2 * Math.PI)
         c.fill()
     }
 
+    var circuloBorda = function(x, y, raio, cor){
+        c.strokeStyle = cor
+        c.beginPath()
+        c.arc(x, y, raio, 0, 2 * Math.PI)
+        c.stroke()
+    }
 
+    var x = 0
+    var y = 0
+    var raio = 40;
+ 
     var desenhaAlvo = function(x, y){
-        var raio = 40;
-        cor("white");
-        circulo(x, y, raio);
-        cor("red");
-        circulo(x, y, raio-10);
-        cor("white");
-        circulo(x, y, raio-20);
-        cor("red");
-        circulo(x, y, raio-30);
+        circuloBorda(x, y, raio + 1, 'red')
+        circulo(x, y, raio,     "white");
+        circulo(x, y, raio-10,  "red");
+        circulo(x, y, raio-20,  "white");
+        circulo(x, y, raio-30,  "red");
+        
+       
+        
     }
 
     var alvoX = 0
@@ -43,6 +56,25 @@
         desenhaAlvo(alvoX, alvoY)
     }
 
+    setInterval(desenha, 800)
+    var pontos = 0
+    var displayPontos = document.getElementById('pontos')
+    
+
+    var tiro = function(evento){
+        var eixoX = evento.pageX - tela.offsetLeft;
+        var eixoY = evento.pageY - tela.offsetTop;
+        if((eixoX > alvoX - raio) && (eixoX < alvoX + raio) && (eixoY > alvoY - raio) && (eixoY < alvoY + raio)){
+            alert  ('acertou')
+            pontos++
+            displayPontos.innerHTML = `Pontuação: ${pontos}`
+        }
+    }
+
+    tela.onclick = tiro
+    
+
+    
     
 
 </script>
